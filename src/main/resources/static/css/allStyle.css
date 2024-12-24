@@ -1,0 +1,63 @@
+body{
+    background-color: #EAF1F7;
+
+}
+.container{
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.header-container{
+    background-color: #EAF1F7;
+}
+.breadcrumb-container{
+    position: relative;
+    top: 10%;
+    right:1%;
+    background-color: white;
+
+}
+.breadcrumb {
+    background-color: transparent; /* Xóa nền mặc định */
+    padding: 0; /* Loại bỏ khoảng cách thừa */
+    margin: 0; /* Loại bỏ margin mặc định */
+    font-size: 0.95rem; /* Điều chỉnh kích thước chữ */
+}
+
+.breadcrumb a {
+    color: black; /* Màu chữ của link */
+    text-decoration: none;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+    color: black; /* Màu sắc của dấu phân cách */
+    padding: 0 5px; /* Khoảng cách giữa các mục */
+}
+.btn-primary {
+    background-color: #337ab7 !important;
+    border-color: #337ab7 !important;
+    color: white !important;
+}
+.d-flex.ml-auto{
+    margin-left:auto;
+}
+/* Căn chỉnh chữ "Manage" và "Course List" trên cùng một dòng */
+.d-flex.align-items-center h3 {
+    font-size: 1.5rem; /* Kích thước chữ cho "Manage" */
+    margin: 0; /* Loại bỏ khoảng cách bên ngoài */
+    padding: 0; /* Loại bỏ khoảng cách bên trong */
+    line-height: 1; /* Đảm bảo không bị cách dòng */
+    display: flex; /* Cần thiết để căn chỉnh */
+    align-items: center;
+}
+
+.d-flex.align-items-center .course-list-text {
+    font-size: 1rem; /* Kích thước chữ cho "Course List" */
+    margin-left: 8px; /* Khoảng cách giữa "Manage" và "Course List" */
+    line-height: 1.5; /* Đảm bảo chữ không bị cách dòng */
+}
+.fa-eye,
+.fa-edit,
+.fa-trash-alt {
+    color: #337ab7 ;
+}
