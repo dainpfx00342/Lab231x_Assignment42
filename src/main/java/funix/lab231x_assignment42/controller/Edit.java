@@ -31,10 +31,11 @@ public class Edit {
                                  @RequestParam("courseStatus") boolean courseStatus,
                                  Model model,
                                  HttpSession session) {
+
         Course oldCourse = courseService.findByCourseCode(courseCode);
-        if(oldCourse!=null){
-            model.addAttribute("course", oldCourse);
+        if(oldCourse!=null && !oldCourse.getId().equals(id)){
             model.addAttribute("error", "Course code is existing, please input Course Code again");
+            model.addAttribute("course", courseService.findById(id));
             return "editCourse";
         }
 
